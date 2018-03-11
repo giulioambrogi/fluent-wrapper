@@ -1,3 +1,4 @@
+import {capitalise} from './utils/utils'
 function generate(specs){
 
     let utils = {};
@@ -5,9 +6,11 @@ function generate(specs){
 
         const formattedName = capitalise(spec.name);
         
-        //find by default
+        
         if(spec.children != null && spec.children.length > 0){
-            utils[`find`+formattedName] = () => Object.assign({name:this.find(spec.selector)}, generateTestUtils(spec.children))
+            const foundElement = this.find(spec.selector);
+            const recursive = generate.apply(foundElement,[spec.children]);
+            utils[`find`+formattedName] = () => Object.assign(this,{name:foundElement}, recursive)
         }else{
             //generate find
             utils[`find`+formattedName] = () => this.find(spec.selector);
@@ -18,8 +21,12 @@ function generate(specs){
 }
 
 
-function capitalise(string){
-    return string[0].toUpperCase() + string.slice(1);
+//entry point 
+function fluentEnzyme(specs, wrapper){
+    return generate.apply(wrapper, [specs]);
 }
 
-module.exports = generate;
+
+
+module.exports = {fluentEnzyme};
+
