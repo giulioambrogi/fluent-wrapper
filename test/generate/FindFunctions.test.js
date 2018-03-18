@@ -31,12 +31,33 @@ describe('when spec contains element at root level', () => {
             result = fluentEnzyme(specs);
         })
 
-        it('Child can be retrieve', ()=>{
+        it.skip('Child can be retrieve', ()=>{
 
             const mainForm = result.findMainForm();
             expect(mainForm.findConfirmButton).not.toBe(null);
             expect(typeof(mainForm.findConfirmButton)).toBe('function');
         })
+    })
+
+})
+
+
+describe('generator should throw an expection', () => {
+
+
+    it('when spec contains duplicate names', ()=>{
+        const specs = [{   
+            name : 'element 1',
+            selector: '.btn'
+        },{   
+            name : 'element 1',
+            selector: '.btn.default'
+        },]
+        expect(()=>fluentEnzyme(specs)).toThrow();
+    })
+
+    it.skip('when multiple elements at the same level use the same selectors', ()=>{
+        //faccio o no?
     })
 
 })

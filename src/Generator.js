@@ -6,14 +6,18 @@ function generate(specs){
 
         const formattedName = capitalise(spec.name);
         
+        const functionName = `find`+formattedName;
         
+        if(utils[functionName] != null){
+            throw `Cannot create function ${functionName} because it alredy exists!`
+        }
         if(spec.children != null && spec.children.length > 0){
             const foundElement = this.find(spec.selector);
             const recursive = generate.apply(foundElement,[spec.children]);
-            utils[`find`+formattedName] = () => Object.assign(this,{name:foundElement}, recursive)
+            // if()
+            utils[functionName] = () => Object.assign(this,{name:foundElement}, recursive)
         }else{
-            //generate find
-            utils[`find`+formattedName] = () => this.find(spec.selector);
+            utils[functionName] = () => this.find(spec.selector);
         }
 
     });
@@ -25,7 +29,6 @@ function generate(specs){
 function fluentEnzyme(specs, wrapper){
     return generate.apply(wrapper, [specs]);
 }
-
 
 
 module.exports = {fluentEnzyme};
