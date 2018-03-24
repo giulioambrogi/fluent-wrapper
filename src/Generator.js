@@ -24,7 +24,6 @@ function generate(specs){
     return utils;
 }
 
-
 //entry point 
 function fluentEnzyme(specs, wrapper){
     return generate.apply(wrapper, [specs]);
