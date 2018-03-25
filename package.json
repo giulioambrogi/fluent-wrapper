@@ -6,6 +6,18 @@
   "scripts": {
     "test": "jest"
   },
+  "keywords": [
+    "enzyme",
+    "react",
+    "testing",
+    "fluent",
+    "reactwrapper",
+    "selectors",
+    "javascript",
+    "test",
+    "tdd",
+    "assertion helpers"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/giulioambrogi/fluent-wrapper.git"
