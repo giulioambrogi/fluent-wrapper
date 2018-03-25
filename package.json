@@ -1,6 +1,6 @@
 {
   "name": "fluent-wrapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An extension for the Enzyme wrapper that lets you write your tests in a fluent way.",
   "main": "index.js",
   "scripts": {
