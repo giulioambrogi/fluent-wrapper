@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'
 import React from 'react';
 import Foo from '../testcomponents/Foo';
-import {fluentEnzyme} from '../../src/Generator';
+import {fluentWrapper} from '../../src/Generator';
 
 let result; 
 
@@ -18,7 +18,7 @@ describe('Element name', () => {
     cases.forEach(c=>{
 
         it(`Find function for "${c.name}" should be rendered as "find${c.expected}"`, ()=>{
-            const ui = fluentEnzyme(mount(<Foo />), [{name:c.name, selector:'.foo'}]);
+            const ui = fluentWrapper(mount(<Foo />), [{name:c.name, selector:'.foo'}]);
             expect(ui[`find${c.expected}`]).toBeDefined()
         })
     })

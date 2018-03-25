@@ -40,10 +40,10 @@ function generate(specs){
 }
 
 //entry point 
-function fluentEnzyme(wrapper, specs){
+function fluentWrapper(wrapper, specs){
     return generate.apply(wrapper, [specs]);
 }
 
 
-module.exports = {fluentEnzyme};
+module.exports = {fluentWrapper};
 

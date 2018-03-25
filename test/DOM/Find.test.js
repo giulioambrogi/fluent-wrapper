@@ -1,9 +1,9 @@
-const  mount = require('enzyme').mount;
-const React = require('react');
+import {mount} from 'enzyme';
+import React from 'react';
 import Foo from '../testcomponents/Foo';
 import Toast from '../testcomponents/Toast';
 import WithList from '../testcomponents/WithList';
-import fluentEnzyme from '../../index';
+import fluentWrapper from '../../index';
 
 let ui;
 
@@ -30,7 +30,7 @@ const specs = [
 describe('When mounting a component with a form', ()=>{
 
     beforeEach(()=>{
-        ui = fluentEnzyme(mount(<Foo><Toast message="a message" /></Foo>), specs);
+        ui = fluentWrapper(mount(<Foo><Toast message="a message" /></Foo>), specs);
     })
 
     it('Specified form can be found', ()=>{
@@ -54,7 +54,7 @@ describe('When mounting a component with a form', ()=>{
 describe('When looking a list of elements', () => {
 
     beforeEach(()=>{
-        ui = fluentEnzyme(mount(<WithList />), [{ name:'myElement', selector:'.something'}]);
+        ui = fluentWrapper(mount(<WithList />), [{ name:'myElement', selector:'.something'}]);
     })
 
     it('an array is received', () => {

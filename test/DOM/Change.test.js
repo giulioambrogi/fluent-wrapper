@@ -1,8 +1,8 @@
-const  mount = require('enzyme').mount;
-const React = require('react');
+import {mount} from 'enzyme';
+import React from 'react';
 import Foo from '../testcomponents/Foo';
 import WithList from '../testcomponents/WithList';
-import fluentEnzyme from '../../index';
+import fluentWrapper from '../../index';
 
 let ui,  changeSpy;
 
@@ -28,7 +28,7 @@ describe('When mounting a component with a clickable form', ()=>{
 
     beforeEach(()=>{
         changeSpy = jest.fn();
-        ui = fluentEnzyme(mount(<Foo changeSpy={changeSpy}/>),specs);
+        ui = fluentWrapper(mount(<Foo changeSpy={changeSpy}/>),specs);
     })
 
     it('an element can be changed', ()=>{
