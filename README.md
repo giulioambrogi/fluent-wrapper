@@ -20,7 +20,7 @@ Currently supported events:
     ui.findMainForm().changeEmail('new@value.com')
     ```
 ## GET STARTED
-`npm install fluent-wrapper`
+`npm install -D fluent-wrapper`
 
 ```javascript
     //in your test

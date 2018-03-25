@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/ambrulio/fluent-enzyme.git"
+    "url": "git+https://github.com/giulioambrogi/fluent-wrapper.git"
   },
   "jest": {
     "setupFiles": [
@@ -22,9 +22,9 @@
       "es2015"
     ]
   },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/ambrulio/fluent-enzyme#readme",
+  "author": "Giulio Ambrogi",
+  "license": "MIT",
+  "homepage": "https://github.com/giulioambrogi/fluent-wrapper",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-jest": "^22.4.1",
