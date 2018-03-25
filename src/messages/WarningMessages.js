@@ -1,3 +1,3 @@
 export default {
-    generic: 'Something warning happened'
+    generic: 'Something not too bad happened'
 }
