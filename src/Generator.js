@@ -1,4 +1,4 @@
-import {capitalise,camelize} from './utils/utils'
+const {capitalise, camelize} = require('./utils/utils');
 
 function buildName(specName){
     specName = specName.split('-').join(' ') 

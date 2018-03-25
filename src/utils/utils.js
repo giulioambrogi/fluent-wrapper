@@ -9,3 +9,7 @@ export function camelize(str) {
     }).replace(/\s+/g, '');
   }
   
+
+module.exports = {
+    capitalise, camelize
+}
