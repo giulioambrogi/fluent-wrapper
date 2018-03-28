@@ -1,3 +1,7 @@
+[![Dependency Up-to-dateness][david-image]][david-url]
+[david-image]: https://david-dm.org/albinotonnina/react-magic-hat.svg
+[david-url]: https://david-dm.org/albinotonnina/react-magic-hat
+
 # fluent-wrapper
 
 The purpose of this package is to extend the `ReactWrapper` you get when you mount/shallow a component with Enzyme with a set of functions that let you find/click/change/etc elements in a fluent way. 
@@ -12,14 +16,14 @@ Currently supported events:
 ## Why fluent-wrapper? 
 - **maintainability:** keep all the selectors in a single place, the `specs`, so you don't mix this mapping with the test logic.
     ```javascript
-    const specs = [{name:'confirmButton', selector:'.btn.confirm'},
+    const specs = [{name:'mainForm', selector:'form.main'},
     {name:'email', selector:'input[name="email"]'}]
     ```
 -  make your tests **fluent**
     ```javascript 
     ui.findMainForm().changeEmail('new@value.com')
     ```
-## GET STARTED
+## Get started
 `npm install -D fluent-wrapper`
 
 ```javascript
@@ -32,11 +36,12 @@ Currently supported events:
     
 ```
 
-## `specs`' properties
+## API
+Properties of a `spec`.
 
-| Property      | Mandatory     | Type  | Description |
-| ------------- |:-------------:| -----:|-----:|
-| `name`     | yes | string ||
+| Property      | Mandatory     | Type    | Description |
+| :------------- | :------- | :-------------- | :--------- |
+| `name`     | yes | string | |
 | `selector`    | yes      |   css selector or `React` element ||
 | `click` | no (default=`false`)     |   boolean | | 
 | `change` | no (default=`false`) |   boolean |  If enabled generates the change function (i.e. `wrapper.changeEmailInput(arg)`). You can pass whatever you would pass to enzyme's `simulate('change')` function.| 
