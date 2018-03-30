@@ -23,7 +23,6 @@ const specs = [
     }
 ]
 
-
 describe('When mounting a component with a clickable form', ()=>{
 
     beforeEach(()=>{
