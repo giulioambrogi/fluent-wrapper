@@ -63,8 +63,9 @@ Properties of a `spec`.
 ## Spec name conversion
 The name is converted to a camel case name and composed with the generated function. 
 See examples below:
-| Spec name      | Generated functions |
-| :------------- | :------- |
+
+| Spec name | Generated functions |
+| :------- | :------- |
 | mybutton | findMybutton, clickMybutton, etc. |
 | Mybutton | findMybutton, clickMybutton, etc. |
 | my button | findMybutton, clickMybutton, etc. |
