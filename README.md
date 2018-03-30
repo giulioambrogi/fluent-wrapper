@@ -29,8 +29,10 @@ Currently supported events:
     ```
 ## Get started
 
-Install > `npm install -D fluent-wrapper`
-Import >  `import fluentWrapper from 'fluent-wrapper'`
+`npm install -D fluent-wrapper`
+
+`import fluentWrapper from 'fluent-wrapper'`
+
 
 ```javascript
 
@@ -61,13 +63,13 @@ Properties of a `spec`.
 ## Spec name conversion
 The name is converted to a camel case name and composed with the generated function. 
 See examples below:
-| Spec name      | Generated functions     |
+| Spec name      | Generated functions |
 | :------------- | :------- |
-| mybutton| findMybutton, clickMybutton, etc.|
-| Mybutton| findMybutton, clickMybutton, etc.|
-| my button| findMybutton, clickMybutton, etc.|
-| my Button| findMyButton, clickMyButton, etc.|
-| my-button| findMyButton, clickMyButton, etc.|
+| mybutton | findMybutton, clickMybutton, etc. |
+| Mybutton | findMybutton, clickMybutton, etc. |
+| my button | findMybutton, clickMybutton, etc. |
+| my Button | findMyButton, clickMyButton, etc. |
+| my-button | findMyButton, clickMyButton, etc. |
 
 ## Example1: simple find
 ```javascript
