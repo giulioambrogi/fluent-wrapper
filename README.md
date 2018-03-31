@@ -1,8 +1,10 @@
+
 # fluent-wrapper
 
-The purpose of this package is to extend the `ReactWrapper` you get when you mount/shallow a component with Enzyme with a set of functions that let you find/click/change/etc elements in a fluent way. 
+Extends the `ReactWrapper` you get when you mount/shallow a component with Enzyme with a set of functions that let you find/click/change/etc elements in a fluent way. 
 
-> For example you can specify an element called **confirmButton** and `fluent-wrapper` will add a `findConfirmButton` to the wrapper.
+![fluent-wrapper demo](http://giulioambrogi.com/img/fluentWrapper.gif)
+
 
 Currently supported events:
 * find
@@ -27,6 +29,7 @@ Currently supported events:
     ```javascript 
     ui.findMainForm().changeEmail('new@value.com')
     ```
+
 ## Get started
 
 `npm install -D fluent-wrapper`
