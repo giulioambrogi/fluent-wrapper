@@ -44,12 +44,12 @@ function generate(specs){
         }else{
             //old API
             if(spec.click){
-                logger.warn(`WARNING: 'click' property will be deprecated please use 'events' proterty instead.`)
+                logger.warn(`WARNING: 'click' property will be deprecated please use 'events' property instead.`)
                 utils[clickFunctionName] = () => this.find(spec.selector).simulate('click');
             }
 
             if(spec.change){
-                logger.warn(`WARNING: 'change' property will be deprecated please use 'events' proterty instead.`)
+                logger.warn(`WARNING: 'change' property will be deprecated please use 'events' property instead.`)
                 utils[changeFunctionName] = (changeArg) => this.find(spec.selector).simulate('change', changeArg);
             }
         }
