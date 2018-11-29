@@ -25,7 +25,8 @@
   "jest": {
     "setupFiles": [
       "./test/setup.js"
-    ]
+    ],
+    "testURL": "http://localhost"
   },
   "babel": {
     "presets": [
